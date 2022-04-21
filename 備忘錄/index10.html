@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta property="og:image" content="../../logo.png" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dot</title>
+
+    <style>
+        ::-webkit-scrollbar{
+            width:15px;
+            
+        }::-webkit-scrollbar-track{
+            background-color: rgb(231, 231, 231);
+            border-radius:10px;
+        }
+        ::-webkit-scrollbar-thumb{
+            background-color: rgb(156, 156, 156);
+            border-radius:10px;
+        }
+        body{
+            max-width:960px;
+            min-width:480px;
+            margin:auto;
+            text-align:center;
+            
+        }
+        .app{
+            /* width:50%;
+            min-width:360px; */
+            width:400px;
+            margin:auto;
+            border:2px solid black;
+            text-align:left;
+            display:inline-block;
+            padding:5px 5px;
+            
+        }
+        .app input{
+            width:80%;
+            margin-left:5%;
+            transform:scale(1.1);
+            
+        }
+        .app textarea{
+            width:80%;
+            transform:scale(1.1);
+            margin-left:5%;
+            height:60px;
+            /* overflow-wrap: break-word; */
+            background-color: transparent;
+            resize:none;
+            overflow:auto;
+            font-size: 20px;
+            /* word-wrap: break-word; */
+        }
+        .app button{
+            width:80%;
+            margin:10px;
+            padding:10px ;
+            border-radius:20px;
+            box-shadow:0px 3px 3px black,5px 5px 10px black; 
+            /* writing-mode: sideways-lr;
+            text-orientation:mixed; */
+        }
+        .list{
+            border-bottom:3px solid black;
+           overflow:auto;
+            height:300px;
+        }
+        .item{
+             margin-bottom:2px;
+             border-bottom:2px solid black;
+             
+        }
+    </style>
+</head>
+<body onload="start()">
+    <div class="app">
+        <h1>備忘錄</h1>
+        <p>記事</p>
+        <textarea type="text"id="content"onkeydown="keyCode(event)"required></textarea>
+        <p>日期</p>
+        <input type="date"id="date">
+        <p>時間</p>
+        <input  type="time"id="time">
+        <button class="add"id="addedBtn">新增</button>
+        <button class="remove"id="deletedBtn">刪除最後一個</button>
+        <div class="list" id="list">
+            <div class="item">
+                <div>
+                    <p>內容:</p>
+                    <p>時間:</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index9.js"></script>
+</body>
+</html>
